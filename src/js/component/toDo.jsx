@@ -7,7 +7,7 @@ const ToDo = ({toDo}) => {
     return (
         <>
             {toDo.map((task, index) =>
-                    (<li key={index}>{task}<span> <i className="fa fa-trash"></i></span></li>)
+                    (<li key={index} className="list-group-item">{task} <span> <i className="fa fa-trash justify-self-end"></i></span></li>)
                 )}
         </>
     )

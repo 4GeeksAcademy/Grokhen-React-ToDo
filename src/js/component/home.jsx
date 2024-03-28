@@ -11,15 +11,16 @@ const Home = () => {
     }
     const sendData = (e) => {
         e.preventDefault()
+		if (!input.trim()) return;
         setToDo([...toDo, input])
         setInput("")
     }
 
     return (
         <>
-            <h1>Tareas pendiente</h1>
+            <h1 className="text-light">Tareas pendientes</h1>
             <AddToDo input={input} newTask={newTask} sendData={sendData} />
-            <ul onClick={(e) => {
+            <ul className="list-group list-group-numbered" onClick={(e) => {
                 if (e.target.matches(".fa-trash")) {
                     e.target.parentElement.parentElement.remove();
                 }
