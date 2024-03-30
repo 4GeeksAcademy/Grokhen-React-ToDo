@@ -18,9 +18,9 @@ const Home = () => {
 
     return (
         <>
-            <h1 className="text-light">Tareas pendientes</h1>
+            <h1 className="text-light mt-3">Tareas pendientes</h1>
             <AddToDo input={input} newTask={newTask} sendData={sendData} />
-            <ul className="list-group list-group-numbered" onClick={(e) => {
+            <ul className="list-group" onClick={(e) => {
                 if (e.target.matches(".fa-trash")) {
                     e.target.parentElement.parentElement.remove();
                 }
